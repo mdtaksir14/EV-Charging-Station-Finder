@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>EV Finder Login</title>
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body class="dark-mode">
+
+    <div class="login-container">
+
+        <h1>
+
+            EV Finder Login
+
+        </h1>
+
+        <!-- Phone Number -->
+
+        <input type="tel"
+            id="phone"
+            placeholder="Enter Mobile Number"
+            maxlength="10">
+
+        <!-- Send OTP Button -->
+
+        <button id="send-otp-btn">
+
+            Send OTP
+
+        </button>
+
+    </div>
+
+    <script>
+
+        document.getElementById("send-otp-btn")
+
+            .addEventListener("click", function () {
+
+                const phone = document.getElementById("phone").value;
+
+                if (phone.length === 10) {
+
+                    alert("OTP Sent Successfully 📩");
+
+                    window.location.href = "otp.html";
+
+                }
+
+                else {
+
+                    alert("Enter valid mobile number");
+
+                }
+
+            });
+
+    </script>
+
+</body>
+
+</html>

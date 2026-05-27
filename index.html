@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>EV Charging Station Finder</title>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <h1>EV Charging Station Finder</h1>
+
+    <!-- Search Section -->
+    <div class="search-container">
+
+        <!-- Search Box -->
+        <input type="text"
+            id="search-box"
+            placeholder="Search location">
+
+        <!-- Search Button -->
+        <button id="search-btn">
+            Search
+        </button>
+        <button id="voice-btn">
+    🎤 Voice Search
+</button>
+
+        <!-- Current Location Button -->
+        <button id="location-btn">
+            My Location
+        </button>
+
+        <!-- Filter Dropdown -->
+        <select id="filter">
+
+            <option value="all">
+                All Stations
+            </option>
+
+            <option value="Fast Charging">
+                Fast Charging
+            </option>
+
+            <option value="Super Fast Charging">
+                Super Fast Charging
+            </option>
+
+            <option value="Normal Charging">
+                Normal Charging
+            </option>
+
+        </select>
+
+        <!-- Filter Button -->
+        <button id="filter-btn">
+            Apply Filter
+        </button>
+
+        <!-- Dark Mode Button -->
+        <button id="theme-btn">
+            Dark Mode
+        </button>
+
+    </div>
+
+    <!-- Analytics Dashboard -->
+
+    <div class="analytics">
+
+        <div class="card total-card">
+
+            <h2 id="total-stations">0</h2>
+
+            <p>Total Stations</p>
+
+        </div>
+
+        <div class="card available-card">
+
+            <h2 id="available-stations">0</h2>
+
+            <p>Available</p>
+
+        </div>
+
+        <div class="card busy-card">
+
+            <h2 id="busy-stations">0</h2>
+
+            <p>Busy</p>
+
+        </div>
+
+        <div class="card full-card">
+
+            <h2 id="full-stations">0</h2>
+
+            <p>Full</p>
+
+        </div>
+
+    </div>
+<!-- Recommendation Box -->
+
+<div class="recommendation-box">
+
+    <h2>
+        AI Smart Recommendation
+    </h2>
+
+    <p id="recommendation-text">
+
+        Best station recommendation will appear here
+
+    </p>
+
+</div>
+<!-- Cost Estimation -->
+
+<div class="recommendation-box">
+
+    <h2>
+        EV Charging Cost Estimator
+    </h2>
+
+    <input type="number"
+        id="battery"
+        placeholder="Enter Battery %">
+
+    <select id="charge-type">
+
+        <option value="Fast Charging">
+            Fast Charging
+        </option>
+
+        <option value="Super Fast Charging">
+            Super Fast Charging
+        </option>
+
+        <option value="Normal Charging">
+            Normal Charging
+        </option>
+
+    </select>
+
+    <button id="estimate-btn">
+        Estimate Cost
+    </button>
+
+    <p id="cost-result">
+
+        Charging estimation will appear here
+
+    </p>
+
+</div>
+    <!-- Map -->
+     <!-- Reviews Section -->
+
+<div class="review-box">
+
+    <h2>User Reviews & Ratings</h2>
+
+    <input type="text"
+        id="user-name"
+        placeholder="Enter Your Name">
+
+    <select id="rating">
+
+        <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+
+        <option value="4">⭐⭐⭐⭐ Good</option>
+
+        <option value="3">⭐⭐⭐ Average</option>
+
+        <option value="2">⭐⭐ Poor</option>
+
+        <option value="1">⭐ Bad</option>
+
+    </select>
+
+    <textarea id="review-text"
+        placeholder="Write your review here"></textarea>
+
+    <button id="submit-review">
+        Submit Review
+    </button>
+
+    <div id="reviews-list">
+
+        <p>No reviews yet</p>
+
+    </div>
+
+</div>
+<!-- Carbon Emission Section -->
+
+<div class="recommendation-box">
+
+    <h2>🌱 Carbon Emission Saved</h2>
+
+    <button id="carbon-btn">
+
+        Calculate Savings
+
+    </button>
+
+    <p id="carbon-result">
+
+        Carbon savings will appear here
+
+    </p>
+
+</div>
+<!-- GRAPH ANALYTICS -->
+
+    <div id="map"></div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <!-- JavaScript -->
+   
+    <script src="script.js"></script>
+
+</body>
+
+</html>

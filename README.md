@@ -290,13 +290,7 @@ Md Taksir Alam
 
 # 🔗 GitHub Repository
 
-Add your GitHub repository link here.
-
-Example:
-
-```text
 https://github.com/mdtaksir14/EV-Charging-Station-Finder
-```
 
 ---
 
